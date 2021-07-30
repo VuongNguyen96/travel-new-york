@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+html {
+    box-sizing: border-box; 
+    font-size:62.5%
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Prata', serif;
+    background-image: url("background-image.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    /* "Visit New York and the aside will be placed next to each other. 
+    Originally, they will be placed as block elements.*/
+    margin:0;
+    min-height: 100vh;
+}
+aside{
+    background-color:black;
+    padding: 4rem;
+    width:320px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+aside a{
+    color: white;
+    display: inline-block;
+    font-size: 3rem;
+    text-decoration: none;
+    margin: 0.75rem;
+}
+aside ul{
+    padding: 0;
+    list-style-type: none;
+}
+.special{
+    background-color:#feab51;
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 2rem;
+}
+main{
+    color:white;
+    font-size: 6rem;
+    padding:3rem;
+}
+main h1{
+    margin:0;
+}
+main h2{
+    color:#feab51;
+    margin: 0;
+    font-size: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    main {
+        min-height: 60vh;
+    }
+
+    aside {
+        height: auto;
+        width: 100%;
+    }
+
+    aside ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .special {
+        display: none;
+    }
+}
